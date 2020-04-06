@@ -1,0 +1,38 @@
+---
+title: "Predictor"
+author: "Pieter van der Want"
+date: "01/04/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## The task explained
+
+I've been tasked with creating an application. Using a certain [dataset](https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip) to predict the next word given a string. The dataset is made up of various text files containing english language text from three different sources, news, blogs and twitter.
+
+## The process
+
+Here are the steps I followed:  
+
+- Download the data and read into r  
+- The data requires some cleaning before it'll import completely  
+- Data requires further cleaning in r before models are built  
+- The 'ngram' package allows for fast model building  
+- Save the final models and buid a prediction function  
+- Put it all together in a shiny app  
+
+## What I've learned
+
+Theres a lot more out there than what I've put in my application. If my app were to be developed further,I would remove "stopwords" and "stem" the words to get the dataframe size down. I would also tag Parts of Speach to better the predictions and to build full sentences. As I have a tight deadline I will not be implementing these technologies. Lastly a user specific DB should be generated with a max size so it doesn't affect the speed of the app.
+
+## How to use the app
+
+A user will select how many words to predict as well as enter a string they wish to predict on.
+Click the 'Submit' button.
+The app will then clean the text given by the user and return a string with the next predicted word/s added.
+The user can 'Submit' another string/change the number of words to predict.
+
+Note: App initial start-up takes a little while.
